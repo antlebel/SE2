@@ -20,12 +20,23 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.BevelBorder;
+import java.lang.String;
+import java.util.Arrays;
 
 /**
  *
  * @author mk
  */
+
 public class MainGUI extends JFrame {
+    
+    //method to take string input and convert to ints and return
+    public static int[] convertToCards(String input){
+    int[] inputcards = new int[4];
+    //convert here
+    
+    return inputcards;
+    }
 
     public MainGUI() {
         super("Super Poker");
@@ -116,6 +127,16 @@ public class MainGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gameModeLayout.last(gameModePanel);
+            }
+        });
+        
+        send.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //grabbing input from jtextfield
+                String  inputText = cardSelection.getText();
+                //testing 
+                soultion.setText(inputText);
             }
         });
 
